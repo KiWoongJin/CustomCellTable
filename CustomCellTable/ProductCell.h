@@ -16,6 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *productPrice;
 @property (weak, nonatomic) IBOutlet UIImageView *productImage;
 
-- (void)setPoductInfo:(Product *)item;
+- (void)setProductInfo:(Product *)item;
 
 @end

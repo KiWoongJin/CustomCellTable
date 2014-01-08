@@ -10,7 +10,7 @@
 
 @implementation ProductCell
 
-- (void) setPoductInfo:(Product *)item
+- (void) setProductInfo:(Product *)item
 {
     self.productName.text = item.name;
     self.productPrice.text = item.price;

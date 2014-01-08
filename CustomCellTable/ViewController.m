@@ -30,7 +30,7 @@
     ProductCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PRODUCT_CELL"];
     
     Product *item = data[indexPath.row];
-    [cell setPoductInfo:item];
+    [cell setProductInfo:item];
     
     return cell;
 }
@@ -38,20 +38,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
-    data = @[[Product product:@"BaseBall" price:@"100" image:@"baseball.png"],
-             [Product product:@"BasketBall" price:@"200" image:@"basketball.png"],
-             [Product product:@"FootBall" price:@"250" image:@"football.png"],
-             [Product product:@"RugbyBall" price:@"300" image:@"rugbyball.png"],
-             [Product product:@"VolleyBall" price:@"500" image:@"volleyball.png"]];
+    data = @[[Product product:@"BaseBall" price:@"$100" image:@"baseball.png"],
+             [Product product:@"BasketBall" price:@"$200" image:@"basketball.png"],
+             [Product product:@"FootBall" price:@"$250" image:@"football.png"],
+             [Product product:@"RugbyBall" price:@"$300" image:@"rugbyball.png"],
+             [Product product:@"VolleyBall" price:@"$500" image:@"volleyball.png"]];
 
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
