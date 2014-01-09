@@ -10,35 +10,33 @@
 #import "ViewController.h"
 #import "Product.h"
 #import "ProductCell.h"
-#import "CartDelegate.h"
+//#import "CartDelegate.h"
+#import "Catalog.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource, CartDelegate>
 {
-    NSArray *data;
-    NSMutableArray *cart;
+    NSMutableArray *cartItems;
 }
+
 @property (weak, nonatomic) IBOutlet UITableView *table;
 
 @end
 
 @implementation ViewController
 
-// 델리게이트 메소드
+// 카달로그 델리게이트 : 제품을 카트에 추가한다.
 - (void)addItem:(id)sender
 {
-    // 제품 찾기 - 셀 객체로 indexPath 얻기
-    UITableViewCell *cell = (UITableViewCell *)sender;
-    NSIndexPath *indexPath = [self.table indexPathForCell:cell];
-    Product *item = data[indexPath.row];
+    // 제품 식별자를 위한 인덱스
+    NSIndexPath *indexPath = [self.table indexPathForCell:sender];
+    Product *product = [[Catalog defaultCatalog] productAt:indexPath.row];
     
-    // 카트에 상품 추가
-    [cart addObject:item];
-    
-    // 테이블 카트 섹션 리로드
+    [cartItems addObject:product];
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
     [self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+// 섹션 2개 설정(0: 카달로그, 1 : 카트)
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }
@@ -46,36 +44,33 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (0 == section)
-        return [data count];
+        return [[Catalog defaultCatalog] numberOfProducts];
     else
-        return [cart count];
+        return [cartItems count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return (0 == section) ? @"상품목록" : @"카트";
+    return (0 == section) ? @"Product" : @"Items in Cart";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // 첫 번째 섹션(카달로그)
     if (0 == indexPath.section) {
     ProductCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PRODUCT_CELL"];
 
-    // 셀 내용 갱신
-    Product *item = data[indexPath.row];
-    [cell setProductInfo:item];
-    
-    // 뷰 컨트롤러가 셀의 델리게이트 역할을 수행한다.
+    // 뷰 컨트롤러(self)가 셀의 델리게이트 역할을 수행한다.
     cell.delegate = self;
-        
+    Product *product = [[Catalog defaultCatalog] productAt:indexPath.row];
+    [cell setProductInfo:product];
     return cell;
     }
-    
+    // 두 번째 섹션(카트)
     else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CART_CELL"];
-        
-        Product *item = cart[indexPath.row];
-        cell.textLabel.text = item.name;
+        Product *product = cartItems[indexPath.row];
+        cell.textLabel.text = product.name;
         return cell;
     }
 }
@@ -84,12 +79,8 @@
 {
     [super viewDidLoad];
     
-    data = @[[Product product:@"BaseBall" price:@"$100" image:@"baseball.png"],
-             [Product product:@"BasketBall" price:@"$200" image:@"basketball.png"],
-             [Product product:@"FootBall" price:@"$250" image:@"football.png"],
-             [Product product:@"RugbyBall" price:@"$300" image:@"rugbyball.png"],
-             [Product product:@"VolleyBall" price:@"$500" image:@"volleyball.png"]];
-    cart = [[NSMutableArray alloc] init];
+
+    cartItems = [[NSMutableArray alloc] init];
 
 }
 

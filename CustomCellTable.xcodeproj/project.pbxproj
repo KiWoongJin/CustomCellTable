@@ -13,6 +13,7 @@
 		0060CED0187CE75F00C602F7 /* rugbyball.png in Resources */ = {isa = PBXBuildFile; fileRef = 0060CECB187CE75F00C602F7 /* rugbyball.png */; };
 		0060CED1187CE75F00C602F7 /* volleyball.png in Resources */ = {isa = PBXBuildFile; fileRef = 0060CECC187CE75F00C602F7 /* volleyball.png */; };
 		0060CF14187D0BAD00C602F7 /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 0060CF13187D0BAD00C602F7 /* cart.png */; };
+		0090AB6D187E5D7100A98D34 /* Catalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0090AB6C187E5D7100A98D34 /* Catalog.m */; };
 		00AAE123187B8906007B8CEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AAE122187B8906007B8CEF /* Foundation.framework */; };
 		00AAE125187B8906007B8CEF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AAE124187B8906007B8CEF /* CoreGraphics.framework */; };
 		00AAE127187B8906007B8CEF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00AAE126187B8906007B8CEF /* UIKit.framework */; };
@@ -49,6 +50,8 @@
 		0060CECC187CE75F00C602F7 /* volleyball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volleyball.png; sourceTree = "<group>"; };
 		0060CF13187D0BAD00C602F7 /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
 		0060CF15187D0DF900C602F7 /* CartDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CartDelegate.h; sourceTree = "<group>"; };
+		0090AB6B187E5D7100A98D34 /* Catalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Catalog.h; sourceTree = "<group>"; };
+		0090AB6C187E5D7100A98D34 /* Catalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Catalog.m; sourceTree = "<group>"; };
 		00AAE11F187B8906007B8CEF /* CustomCellTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomCellTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00AAE122187B8906007B8CEF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		00AAE124187B8906007B8CEF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,6 +150,8 @@
 				00AAE15A187B8A3B007B8CEF /* ProductCell.h */,
 				00AAE15B187B8A3B007B8CEF /* ProductCell.m */,
 				0060CF15187D0DF900C602F7 /* CartDelegate.h */,
+				0090AB6B187E5D7100A98D34 /* Catalog.h */,
+				0090AB6C187E5D7100A98D34 /* Catalog.m */,
 				00AAE13A187B8906007B8CEF /* Images.xcassets */,
 				00AAE129187B8906007B8CEF /* Supporting Files */,
 			);
@@ -290,6 +295,7 @@
 				00AAE159187B8A0B007B8CEF /* Product.m in Sources */,
 				00AAE133187B8906007B8CEF /* AppDelegate.m in Sources */,
 				00AAE12F187B8906007B8CEF /* main.m in Sources */,
+				0090AB6D187E5D7100A98D34 /* Catalog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

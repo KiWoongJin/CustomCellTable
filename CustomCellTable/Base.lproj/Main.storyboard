@@ -65,15 +65,15 @@
                                             <outlet property="productPrice" destination="Syv-O8-r7a" id="R0d-HK-HeH"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CART_CELL" textLabel="03m-Y2-y60" rowHeight="68" style="IBUITableViewCellStyleDefault" id="COG-1t-JR4" customClass="ProductCell">
-                                        <rect key="frame" x="0.0" y="90" width="320" height="68"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CART_CELL" textLabel="03m-Y2-y60" rowHeight="35" style="IBUITableViewCellStyleDefault" id="COG-1t-JR4" customClass="ProductCell">
+                                        <rect key="frame" x="0.0" y="90" width="320" height="35"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="COG-1t-JR4" id="jYG-l5-GY8">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="03m-Y2-y60">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="67"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="34"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
