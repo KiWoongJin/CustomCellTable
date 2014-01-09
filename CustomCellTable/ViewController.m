@@ -10,8 +10,11 @@
 #import "ViewController.h"
 #import "Product.h"
 #import "ProductCell.h"
-//#import "CartDelegate.h"
+#import "Cart.h"
+#import "CartCell.h"
 #import "Catalog.h"
+#import "CartDelegate.h"
+
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource, CartDelegate>
 {
@@ -19,6 +22,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *table;
+@property (strong, nonatomic) Cart *cart;
 
 @end
 
@@ -34,6 +38,18 @@
     [cartItems addObject:product];
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:1];
     [self.table reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+// 카트 내 상품 수량 증가
+- (void)incQuantity:(NSString *)productCode
+{
+
+}
+
+// 카트 내 상품 수량 감소
+- (void)decQuantity:(NSString *)productCode
+{
+    
 }
 
 // 섹션 2개 설정(0: 카달로그, 1 : 카트)

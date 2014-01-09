@@ -29,11 +29,11 @@ static Catalog *_instance = nil;
 {
     self = [super init];
     if (self) {
-        data = @[[Product product:@"BaseBall" price:@"$100" image:@"baseball.png"],
-                 [Product product:@"BasketBall" price:@"$200" image:@"basketball.png"],
-                 [Product product:@"FootBall" price:@"$250" image:@"football.png"],
-                 [Product product:@"RugbyBall" price:@"$300" image:@"rugbyball.png"],
-                 [Product product:@"VolleyBall" price:@"$500" image:@"volleyball.png"]];
+        data = @[[Product product:@"BaseBall" code:@"baseball" price:@"$100" image:@"baseball.png"],
+                 [Product product:@"BasketBall" code:@"basketball" price:@"$200" image:@"basketball.png"],
+                 [Product product:@"FootBall" code:@"football" price:@"$250" image:@"football.png"],
+                 [Product product:@"RugbyBall" code:@"rugbyball" price:@"$300" image:@"rugbyball.png"],
+                 [Product product:@"VolleyBall" code:@"volleyball" price:@"$500" image:@"volleyball.png"]];
     }
     return self;
 }

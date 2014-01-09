@@ -12,6 +12,7 @@
 
 @interface ProductCell : UITableViewCell
 
+// 제품정보를 셀에 반영
 - (void)setProductInfo:(Product *)item;
 
 @property (weak)id <CartDelegate> delegate;

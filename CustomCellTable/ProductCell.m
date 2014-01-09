@@ -9,9 +9,11 @@
 #import "ProductCell.h"
 
 @interface ProductCell()
+
 @property (weak, nonatomic) IBOutlet UILabel *productName;
 @property (weak, nonatomic) IBOutlet UILabel *productPrice;
 @property (weak, nonatomic) IBOutlet UIImageView *productImage;
+
 @end
 
 @implementation ProductCell
