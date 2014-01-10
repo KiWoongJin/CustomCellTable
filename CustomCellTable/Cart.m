@@ -17,12 +17,32 @@
 
 @implementation Cart
 
+
+- (id) init
+{
+    self = [super init];
+    if (self) {
+        self.items = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
 // 카트에 제품 추가
 - (void)addProduct:(Product *)item
 {
-    // 카트 내 동일상품 검색
-    // 동일제품 검색 성공 시 제품수량 증가
-    // 동일제품 검색 실패 시 새로운 상품을 카트에 추가
+    CartItem *cartItem = [self cartItemWith:item.code];
+
+    // 동일 제품 검색 실패 -> 새로운 상품을 카트에 추가
+    if (cartItem == nil) {
+        cartItem = [[CartItem alloc] init];
+        cartItem.product = item;
+        cartItem.quantity = 1;
+        [self.items addObject:cartItem];
+    }
+    
+    // 동일 제품 검색 성공 -> 제품 수량 증가
+    else {
+        [self incQuantity:item.code];
+    }
 }
 
 // 카트 내 상품수량 증가

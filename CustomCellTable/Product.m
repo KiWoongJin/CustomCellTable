@@ -28,4 +28,13 @@
     return [self.code isEqualToString:productCode];
 }
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 @end

@@ -136,6 +136,8 @@
 				00AAE158187B8A0B007B8CEF /* Product.m */,
 				00AAE15A187B8A3B007B8CEF /* ProductCell.h */,
 				00AAE15B187B8A3B007B8CEF /* ProductCell.m */,
+				0090AB6B187E5D7100A98D34 /* Catalog.h */,
+				0090AB6C187E5D7100A98D34 /* Catalog.m */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -190,8 +192,6 @@
 				0090AB7C187E7BFC00A98D34 /* images */,
 				0090AB81187E824C00A98D34 /* Product */,
 				0090AB9A187EA2A500A98D34 /* Cart */,
-				0090AB6B187E5D7100A98D34 /* Catalog.h */,
-				0090AB6C187E5D7100A98D34 /* Catalog.m */,
 				00AAE137187B8906007B8CEF /* ViewController.h */,
 				00AAE138187B8906007B8CEF /* ViewController.m */,
 				00AAE131187B8906007B8CEF /* AppDelegate.h */,

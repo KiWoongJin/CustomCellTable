@@ -16,9 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *quantity;
 
-- (IBAction)plusClicked:(id)sender;
-- (IBAction)minusClicked:(id)sender;
-
 @end
 
 @implementation CartCell
@@ -26,13 +23,13 @@
 // 수량 증가 버튼을 누르면
 - (IBAction)plusClicked:(id)sender
 {
-    
+    [self.delegate incQuantity:self.productCode];
 }
 
 // 수량 감소 버튼을 누르면
 - (IBAction)minusClicked:(id)sender
 {
-    self.productCode = 
+    [self.delegate decQuantity:self.productCode];
 }
 
 // 셀에 반영할 내용
@@ -42,7 +39,8 @@
     self.productCode = item.product.code;
     
     // 셀 반영
-    
+    self.name.text = item.product.name;
+    self.quantity.text = [NSString stringWithFormat:@"%d개", item.quantity];
 }
 
 @end
