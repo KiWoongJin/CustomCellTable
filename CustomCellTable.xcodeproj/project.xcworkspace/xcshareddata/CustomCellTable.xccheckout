@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8205E249-493D-4A2B-9F80-7B3C3D9A141B</string>
+	<string>36082C51-8889-49D1-A155-0F36CE1A0027</string>
 	<key>IDESourceControlProjectName</key>
 	<string>CustomCellTable</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>3B4B3A01-BBB7-4B42-A9AD-A5924A52BE15</key>
-		<string>https://github.com/mayaljh/CustomCellTable.git</string>
+		<key>0547BDA0-2B87-496C-BF33-30F1F8770217</key>
+		<string>https://github.com/iasandcb/CustomCellTable.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>CustomCellTable.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>3B4B3A01-BBB7-4B42-A9AD-A5924A52BE15</key>
+		<key>0547BDA0-2B87-496C-BF33-30F1F8770217</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mayaljh/CustomCellTable.git</string>
+	<string>https://github.com/iasandcb/CustomCellTable.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3B4B3A01-BBB7-4B42-A9AD-A5924A52BE15</string>
+	<string>0547BDA0-2B87-496C-BF33-30F1F8770217</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3B4B3A01-BBB7-4B42-A9AD-A5924A52BE15</string>
+			<string>0547BDA0-2B87-496C-BF33-30F1F8770217</string>
 			<key>IDESourceControlWCCName</key>
-			<string>CatalogueTable</string>
+			<string>CustomCellTable</string>
 		</dict>
 	</array>
 </dict>

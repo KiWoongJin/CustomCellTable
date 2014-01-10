@@ -19,7 +19,6 @@
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource, CartDelegate>
 
-@property NSMutableArray *items;
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) Cart *cart;
 
@@ -68,7 +67,7 @@
     if (0 == section)
         return [[Catalog defaultCatalog] numberOfProducts];
     else
-        return [self.items count];
+        return [self.cart.items count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -105,8 +104,6 @@
     [super viewDidLoad];
     
     self.cart = [[Cart alloc]init];
-    self.items = [[NSMutableArray alloc] init];
-
 }
 
 - (void)didReceiveMemoryWarning
