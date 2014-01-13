@@ -40,7 +40,7 @@
     
     // 셀 반영
     self.name.text = item.product.name;
-    self.quantity.text = [NSString stringWithFormat:@"%d개", item.quantity];
+    self.quantity.text = [NSString stringWithFormat:@"%d개", (int)item.quantity];
 }
 
 @end

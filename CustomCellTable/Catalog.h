@@ -10,8 +10,8 @@
 
 @interface Catalog : NSObject
 
-- (id)productAt:(int)index;
-- (int)numberOfProducts;
+- (id)productAt:(NSUInteger)index;
+- (NSUInteger)numberOfProducts;
 
 + (id)defaultCatalog;
 

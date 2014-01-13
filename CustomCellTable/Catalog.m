@@ -39,12 +39,12 @@ static Catalog *_instance = nil;
 }
 
 
-- (id)productAt:(int)index
+- (id)productAt:(NSUInteger)index
 {
     return [data objectAtIndex:index];
 }
 
-- (int)numberOfProducts
+- (NSUInteger)numberOfProducts
 {
     return [data count];
 }
