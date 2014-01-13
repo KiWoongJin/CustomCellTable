@@ -17,6 +17,16 @@
 
 @implementation Cart
 
+// 싱글톤 메소드
+static Cart *_instance = nil;
+
++ (id)defaultCart
+{
+    if (nil == _instance) {
+        _instance = [[Cart alloc] init];
+    }
+    return _instance;
+}
 
 - (id) init
 {

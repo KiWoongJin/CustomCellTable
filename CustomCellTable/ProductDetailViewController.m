@@ -9,6 +9,9 @@
 #import "ProductDetailViewController.h"
 
 @interface ProductDetailViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UITextView *descView;
 
 @end
 
@@ -27,6 +30,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.nameLabel.text = self.product.name;
+    self.priceLabel.text = self.product.price;
+    self.descView.text = @"Dummy";
 }
 
 - (void)didReceiveMemoryWarning

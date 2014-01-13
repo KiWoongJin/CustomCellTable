@@ -24,4 +24,6 @@
 // 상품코드로 카트 내 동일상품 찾기
 - (CartItem *)cartItemWith:(NSString *)productCode;
 
++ (id)defaultCart;
+
 @end

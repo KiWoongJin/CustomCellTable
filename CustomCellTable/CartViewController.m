@@ -7,12 +7,56 @@
 //
 
 #import "CartViewController.h"
+#import "Cart.h"
+#import "CartCell.h"
+#import "CartItem.h"
+#import "CartDelegate.h"
 
-@interface CartViewController ()
+@interface CartViewController () <UITableViewDataSource, CartCellDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *table;
+@property (weak, nonatomic) Cart *cart;
 
 @end
 
 @implementation CartViewController
+
+// 카트 내 상품 수량 증가
+- (void)incQuantity:(NSString *)productCode
+{
+    [self.cart incQuantity:productCode];
+    
+    [self.table reloadData];
+}
+
+// 카트 내 상품 수량 감소
+- (void)decQuantity:(NSString *)productCode
+{
+    [self.cart decQuantity:productCode];
+    
+    [self.table reloadData];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    Cart *cart = [Cart defaultCart];
+    return cart.items.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // 두 번째 섹션(카트)
+        CartCell *cell = (CartCell *)[tableView dequeueReusableCellWithIdentifier:@"CART_CELL"];
+        cell.delegate = self;
+    CartItem *cartItem = self.cart.items[indexPath.row];
+        [cell setCartItem:cartItem];
+        
+        return cell;
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +71,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.cart = [Cart defaultCart];
 }
 
 - (void)didReceiveMemoryWarning

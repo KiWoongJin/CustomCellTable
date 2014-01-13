@@ -35,6 +35,8 @@
 		00AAE14E187B8906007B8CEF /* CustomCellTableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AAE14D187B8906007B8CEF /* CustomCellTableTests.m */; };
 		00AAE159187B8A0B007B8CEF /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AAE158187B8A0B007B8CEF /* Product.m */; };
 		00AAE15C187B8A3B007B8CEF /* ProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AAE15B187B8A3B007B8CEF /* ProductCell.m */; };
+		40A9079E18839CC00042CE9A /* ProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A9079D18839CC00042CE9A /* ProductDetailViewController.m */; };
+		40A907A118839E980042CE9A /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A907A018839E980042CE9A /* CartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,10 @@
 		00AAE158187B8A0B007B8CEF /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		00AAE15A187B8A3B007B8CEF /* ProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductCell.h; sourceTree = "<group>"; };
 		00AAE15B187B8A3B007B8CEF /* ProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductCell.m; sourceTree = "<group>"; };
+		40A9079C18839CC00042CE9A /* ProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailViewController.h; sourceTree = "<group>"; };
+		40A9079D18839CC00042CE9A /* ProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailViewController.m; sourceTree = "<group>"; };
+		40A9079F18839E980042CE9A /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
+		40A907A018839E980042CE9A /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +205,10 @@
 				00AAE134187B8906007B8CEF /* Main.storyboard */,
 				00AAE13A187B8906007B8CEF /* Images.xcassets */,
 				00AAE129187B8906007B8CEF /* Supporting Files */,
+				40A9079C18839CC00042CE9A /* ProductDetailViewController.h */,
+				40A9079D18839CC00042CE9A /* ProductDetailViewController.m */,
+				40A9079F18839E980042CE9A /* CartViewController.h */,
+				40A907A018839E980042CE9A /* CartViewController.m */,
 			);
 			path = CustomCellTable;
 			sourceTree = "<group>";
@@ -338,8 +348,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0090AB94187EA1B000A98D34 /* Cart.m in Sources */,
+				40A9079E18839CC00042CE9A /* ProductDetailViewController.m in Sources */,
 				00AAE15C187B8A3B007B8CEF /* ProductCell.m in Sources */,
 				00AAE139187B8906007B8CEF /* ViewController.m in Sources */,
+				40A907A118839E980042CE9A /* CartViewController.m in Sources */,
 				00AAE159187B8A0B007B8CEF /* Product.m in Sources */,
 				0090AB96187EA1B000A98D34 /* CartItem.m in Sources */,
 				00AAE133187B8906007B8CEF /* AppDelegate.m in Sources */,
